@@ -115,22 +115,26 @@ mostrar quantos assentos ainda podem ser ocupados, com a frase:
 - Se couber somente mais uma pessoa, mostrar a palavra "pessoa" no retorno
 citado acima, no lugar de "pessoas".
 */
-carro.adicionarPessoas = function(adicionar){
-  carro.quantidadePessoa++;
 
-  if(carro.quantidadePessoa == 1){
-    return 'Já tem 1 pessoa no carro! ';
-  }
-  if (carro.quantidadePessoa == 2){
-    return 'Já tem 2 pessoa no carro !';
-  }
-  if (carro.quantidadePessoa == 3){
-    return 'Já tem 3 pessoa no carro !';
-  }
-  if ((carro.quantidadePessoa == 4){
-    return 'Já tem 4 pessoa no carro!';
 
-}
+carro.adicionarPessoas = function (addPessoas) {
+  var totalPessoas = carro.quantidadePessoas + addPessoas;
+
+  if (carro.quantidadePessoas === carro.assentos && totalPessoas >= carro.assentos) {
+    return 'O carro já está lotado!';
+  }
+
+  if (totalPessoas > carro.assentos) {
+    var quantasPessoasCabem =  carro.assentos - carro.quantidadePessoas;
+    var pluralOuSingular = quantasPessoasCabem === 1 ? ' pessoa' : ' pessoas';
+    return 'Só cabem mais ' + quantasPessoasCabem + pluralOuSingular + '!';
+  }
+
+  carro.quantidadePessoas += addPessoas;
+
+  return 'Já temos ' + carro.quantidadePessoas + ' pessoas no carro!';
+};
+
 /*
 Agora vamos verificar algumas informações do carro. Para as respostas abaixo,
 utilize sempre o formato de invocação do método (ou chamada da propriedade),
@@ -157,7 +161,8 @@ carro.obterCor()// MMusgo
 carro.obterMarcaModelo()
 
 // Adicione 2 pessoas no carro.
-carro.adicionarPessoas(4)
+carro.adicionarPessoas(1)
+carro.adicionarPessoas(1)
 
 // Adicione mais 4 pessoas no carro.
 
