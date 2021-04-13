@@ -161,22 +161,22 @@ carro.obterCor()// MMusgo
 carro.obterMarcaModelo()
 
 // Adicione 2 pessoas no carro.
-carro.adicionarPessoas(1)
-carro.adicionarPessoas(1)
+carro.adicionarPessoas(2); // "Já temos 2 pessoas no carro!"
+
 
 // Adicione mais 4 pessoas no carro.
 
-carro.adicionarPessoas(4)
+carro.adicionarPessoas(4); // Só cabem mais 2 pessoas!
 
 // Faça o carro encher.
-?
+carro.adicionarPessoas(3); // "Já temos 5 pessoas no carro!"
 
 // Tire 4 pessoas do carro.
-?
+carro.adicionarPessoas(-4); // "Já temos 1 pessoas no carro!"
 
 // Adicione 10 pessoas no carro.
-?
+carro.adicionarPessoas(10); // // "Só cabem mais 4 pessoas!"
 
 // Quantas pessoas temos no carro?
-?
+carro.quantidadePessoas; // 1
 ```
