@@ -60,22 +60,33 @@ os livros.
 */
 function book (livro){
     
-    var outrosLivros = { livro1 = {nomeDoLivro1: 'Javascript-ninja', quantidadePaginas: 220, autor: 'Jose Lima'},
- 
-    livro2 = {nomeDoLivro2: 'Aprendendo-javascript-ninja',  quantidadePaginas: 330, autor: 'Edivan Lima' },
+    var outrosLivros = { 'Aprendendo Javasscript ninja':{
+        quantidadePaginas: 220, 
+        autor: 'Jose Lima',
+         editora : 'Bookman'},
 
-    livro3 = {nomeDoLivro3: 'javascript-mestre',  quantidadePaginas: 192, autor: 'Judith Ramos',
+    'Javascript o guia do programador':{
+        quantidadePaginas: 330,
+         autor: 'Judith Ramos', 
+         editora: 'Novatec' },
+
+    'Aprendendo Node':{
+        quantidadePaginas: 460, 
+        autor: 'Flavio almeida',
+         editora: 'Alta Books ' },
+    
+};
+ return outrosLivros[livro];
+ return !livro ? outrosLivros : outrosLivros [livro]
 }
 
-}
-}
 
 
 // ?
 
 /*
 Usando a função criada acima, imprima o objeto com todos os livros.
-*/
+*/ console.log(livro())
 // ?
 
 /*
