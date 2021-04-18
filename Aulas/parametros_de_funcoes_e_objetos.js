@@ -11,4 +11,5 @@ function myfunction1(arg){
 
 console.log(obj.propriedade)
 console.log(obj.curso)
+
 console.log(myfunction1(obj))
