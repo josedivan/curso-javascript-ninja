@@ -34,6 +34,12 @@ function valorDeX(x) {
   }
 }
 
+// A mesma coisa que o if else 
+// Ex: if (x == 1){
+  // 1
+// } else if (x ===2){
+  // 2
+
 console.log(valorDeX(0))
 
 console.log(myfunc())
