@@ -76,7 +76,7 @@ function book (livro){
          editora: 'Alta Books ' },
     
 };
- return outrosLivros[livro];
+
  return !livro ? outrosLivros : outrosLivros [livro]
 }
 
@@ -86,14 +86,15 @@ function book (livro){
 
 /*
 Usando a função criada acima, imprima o objeto com todos os livros.
-*/ console.log(livro())
+*/ console.log(book())
 // ?
 
 /*
 Ainda com a função acima, imprima a quantidade de páginas de um livro qualquer,
 usando a frase:
 "O livro [NOME_DO_LIVRO] tem [X] páginas!"
-*/
+*/  bookName =  ' Javascript o guia do programador';
+console.log('O livro' +bookName+ ' tem ' + book( bookName ).quantidadePaginas + ' páginas ')
 // ?
 
 /*
