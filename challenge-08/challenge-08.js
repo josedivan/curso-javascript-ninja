@@ -57,18 +57,43 @@ vai efetuar. Será uma string com os valores `+`, `-`, `*`, `/` ou `%`;
   - Se o operador não for válido, retornar a frase:
   "Operação inválida."
 */
-
+function calculator(operador) {
+  return function (n1, n2) {
+    var resultado;
+    switch (operador) {
+      case "+":
+        resultado = n1 + n2;
+        break
+      case "-":
+        resultado = n1 - n2;
+        break
+      case '*':
+        resultado = n1 * n2;
+        break
+      case "/":
+        resultado = n1 / n2;
+        break
+      case "%":
+        resultado = n1 % n2;
+        break
+      default:
+        'Não existe esta operaçâo'
+    }
+    return "Resultado da operação: " + n1 + " " + operador + " " + n2 + " = " + resultado + "."
+  };
+}
+console.log(calculator())
 
 /*
 Declare uma variável chamada `sum`, que receberá a função acima, passando como
 parâmetro o operador de soma.
 */
-// ?
+var sum = calculator('+')
 
 /*
 Agora `sum` é uma função. Mostre no console a soma de dois números, usando ela.
 */
-// ?
+console.log(sum(2, 9))
 
 /*
 Agora, declare algumas variáveis com os nomes `subtraction`, `multiplication`,
