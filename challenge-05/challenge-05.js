@@ -119,6 +119,5 @@ a frase:
 
 console.log("O nome do livro" + bookLivro1 + ' foi publicado pela editora ' + book(bookLivro1).editora);
 
-
 // ?
 
